@@ -10,29 +10,29 @@
                     </div>
                 </div>
                 <div class="col-4 footer__social__icons d-flex justify-content-center flex-wrap">
-                    <a href="#">
+                    <a href="https://discord.gg/ADQPwabQ">
                         <img src="../../public/assets/images/footer.svg" />
                     </a>
-                    <a href="#">
+                    <a href="https://www.tiktok.com/@cliviapp">
                         <img src="../../public/assets/images/footer2.svg" />
                     </a>
-                    <a href="#">
+                    <a href="https://www.twitch.tv/cliviapp">
                         <img src="../../public/assets/images/footer3.svg" />
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/cliviapp">
                         <img src="../../public/assets/images/Instagram.svg" />
                     </a>
-                    <a href="#">
+                    <a href="https://twitter.com/APPCLIVI">
                         <img src="../../public/assets/images/Twitter.svg" />
                     </a>
-                    <a href="#">
+                    <a href="https://www.youtube.com/channel/UCnDtQ4qpTyknMTV7LV4MsQQ">
                         <img src="../../public/assets/images/YouTube.svg" />
                     </a>
 
                 </div>
 
                 <div class="col-4 footer__contact__wrap d-flex justify-content-end">
-                    <a href="#">
+                    <a href="mailto: hello@clivi.com">
                         Contact
                     </a>
                 </div>

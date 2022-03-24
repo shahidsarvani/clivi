@@ -7,16 +7,16 @@
         >
           <div class="header__wrapper__inner d-flex align-items-center">
             <div class="header__logo h-100 p-0 m-0">
-              <a href="#">
+              <a href="/">
                 <img class="d-flex" src="../../public/assets/images/logo.svg" />
               </a>
             </div>
             <div class="header__btn__wrap d-flex">
-              <a class="btn btn__wrap me-3" href="#">
+              <a class="btn btn__wrap me-3" href="https://www.apple.com/app-store/">
                 <img class="me-2" src="../../public/assets/images/apple.svg" />
                 <span>App store</span>
               </a>
-              <a class="btn btn__wrap" href="#">
+              <a class="btn btn__wrap" href="https://play.google.com/store">
                 <img class="me-2" src="../../public/assets/images/google.svg" />
                 <span>Google play</span>
               </a>

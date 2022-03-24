@@ -36,7 +36,7 @@ export default {
   name: 'TimerCountdown',
   data() {
     return {
-      futureDate: new Date(2022, 5, 16, 10, 52, 10),
+      futureDate: new Date(2022, 4, 30),
       futureTime: null,
       today: null,
       days: null,

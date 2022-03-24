@@ -198,7 +198,7 @@ export default {
   async mounted() {
     axios.defaults.headers.common.Authorization = 'Bearer ' + localStorage.getItem('token')
     this.user = await this.get_user_data();
-    this.referral_link = 'http://localhost:3000/register/' + this.user.username;
+    this.referral_link = 'https://clivi.com/register/' + this.user.username;
     let referred_users = await this.get_referred_users();
     this.referred_users = referred_users.referred_users;
   },

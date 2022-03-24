@@ -127,7 +127,8 @@ import TimerCountdown from './TimerCountdown.vue';
 import axios from 'axios';
 import '../axios';
 
-const baseURL = 'https://dp8staging.com/dev/clivi-landing/api';
+// const baseURL = 'https://dp8staging.com/dev/clivi-landing/api';
+const baseURL = 'https://portal.clivi.com/index.php/api';
 
 // const getFormData = (object) =>
 //   Object.keys(object).reduce((formData, key) => {
@@ -189,6 +190,7 @@ export default {
         password: this.form.password,
         country_id: this.form.country_id,
         dob: this.form.dob,
+        referral_username: this.form.referral_username,
       };
       console.log(postData);
       try {
