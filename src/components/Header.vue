@@ -51,7 +51,7 @@
     <header class="header d-block d-md-none py-4">
       <div class="container h-100">
         <div class="row gy-4">
-          <div class="col-6">
+          <div class="col-12">
             <div
               class="header__logo h-100 p-0 m-0 justify-content-center d-flex"
             >
@@ -60,13 +60,13 @@
               </a>
             </div>
           </div>
-          <div class="col-6">
-            <div class="header__btn__wrap d-flex flex-column justify-content-center">
+          <div class="col-12">
+            <div class="header__btn__wrap d-flex justify-content-center">
               <a class="btn btn__wrap w-100 me-3" href="#">
                 <img class="me-2" src="../../public/assets/images/apple.svg" />
                 <span>App store</span>
               </a>
-              <a class="btn btn__wrap w-100 mt-3" href="#">
+              <a class="btn btn__wrap w-100" href="#">
                 <img class="me-2" src="../../public/assets/images/google.svg" />
                 <span>Google play</span>
               </a>
