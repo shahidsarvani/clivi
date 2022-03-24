@@ -3,7 +3,7 @@
     <section class="main_section">
       <div class="container">
         <div class="row">
-          <div class="col-5 me-auto">
+          <div class="col-12 col-lg-5 me-auto">
             <div class="content_main_inner my-4">
               <h3>Good Coming!</h3>
               <p>join the beta & get rewards bringing your squad!</p>
@@ -11,7 +11,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-md-5 d-flex align-items-center">
+          <div class="col-12 col-md-6 col-lg-5 d-flex align-items-center">
             <div class="invite_wrap p-3">
               <h3>Invite Friends & <span>earn products</span></h3>
               <form class="mt-3" @submit.prevent="handleSubmit">
@@ -49,7 +49,7 @@
               </form>
             </div>
           </div>
-          <div class="col-12 col-md-5 ms-auto d-flex align-items-center">
+          <div class="col-12 col-md-6 col-lg-5 ms-auto d-flex align-items-center">
             <TimerCountdown />
           </div>
         </div>

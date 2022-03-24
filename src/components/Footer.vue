@@ -43,12 +43,12 @@
     <footer class="d-block d-md-none">
         <div class="container h-100">
             <div class="row gy-4 footer__wrapper h-100 d-flex align-items-center justify-content-between">
-                <div class="col-6 footer__inner h-100 d-flex text-center">
+                <div class="col-6 footer__inner h-100 d-flex justify-content-end text-center">
                     <div class="footer__logo d-flex flex-column align-items-center justify-content-center">
                         <img src="../../public/assets/images/logo.svg" />
                     </div>
                 </div>
-                <div class="col-6 footer__contact__wrap d-flex justify-content-end">
+                <div class="col-6 footer__contact__wrap d-flex justify-content-start">
                     <a href="#">
                         Contact
                     </a>
