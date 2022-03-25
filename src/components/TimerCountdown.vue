@@ -19,23 +19,31 @@
       </div>
     </div>
     <div class="content_days_inner d-flex justify-content-between mt-4">
-      <div class="content_single ps-3">
+      <!-- <div class="content_single ps-3">
         <h3>10M</h3>
         <h3>app downloads</h3>
       </div>
       <div class="content_single ps-3 ms-2 ms-lg-0">
         <h3>300K</h3>
         <h3>device connections</h3>
+      </div> -->
+      <div class="content_single ps-3">
+        <h3>{{ user_count }}</h3>
+        <h3>registered users</h3>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+import '../axios';
+
 export default {
   name: 'TimerCountdown',
   data() {
     return {
+      user_count: 0,
       futureDate: new Date(2022, 4, 30),
       futureTime: null,
       today: null,
@@ -49,8 +57,14 @@ export default {
   mounted() {
     this.futureTime = this.futureDate.getTime();
     this.countdownInterval();
+    this.get_user_count();
   },
   methods: {
+    async get_user_count() {
+      let response = await axios.get('/api/get_user_count');
+      this.user_count = response.data.users_count;
+
+    },
     countdownTimer() {
       const t = this.futureTime - this.today;
 
