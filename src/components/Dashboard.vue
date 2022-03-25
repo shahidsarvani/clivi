@@ -199,12 +199,16 @@ export default {
     axios.defaults.headers.common.Authorization = 'Bearer ' + localStorage.getItem('token')
     this.user = await this.get_user_data();
     this.referral_link = 'https://clivi.com/register/' + this.user.username;
-    let referred_users = await this.get_referred_users();
-    this.referred_users = referred_users.referred_users;
+    let referred_users = await this.get_users();
+    this.referred_users = referred_users.users;
   },
   methods: {
     async get_user_data() {
       let response = await axios.get('/api/get_user');
+      return response.data;
+    },
+    async get_users() {
+      let response = await axios.get('/api/get_users');
       return response.data;
     },
     async get_referred_users() {
