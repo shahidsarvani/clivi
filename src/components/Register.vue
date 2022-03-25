@@ -58,9 +58,13 @@
                         v-model="form.country_id"
                       >
                         <option value="" selected>Country</option>
-                        <option value="1">Pakistan</option>
-                        <option value="2">UK</option>
-                        <option value="3">USA</option>
+                        <option
+                          v-for="item in countries"
+                          :key='item.id'
+                          :value="item.id"
+                        >
+                          {{ item.name }}
+                        </option>
                       </select>
                     </div>
                   </div>
@@ -129,6 +133,7 @@ import '../axios';
 
 // const baseURL = 'https://dp8staging.com/dev/clivi-landing/api';
 const baseURL = 'https://portal.clivi.com/index.php/api';
+// const baseURL = 'http://127.0.0.1:8000/api';
 
 // const getFormData = (object) =>
 //   Object.keys(object).reduce((formData, key) => {
@@ -150,9 +155,11 @@ export default {
         referral_username: this.$route.params.username,
       },
       users: '',
+      countries: '',
     };
   },
   async mounted() {
+    await this.get_countries();
     let users = await this.get_users();
     this.users = users.users;
   },
@@ -227,6 +234,10 @@ export default {
     async get_users() {
       let response = await axios.get('/api/get_users');
       return response.data;
+    },
+    async get_countries() {
+      let response = await axios.get('/api/get_countries');
+      this.countries = response.data.countries;
     },
   },
 };
