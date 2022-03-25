@@ -413,6 +413,8 @@ input.copy_field::placeholder {
   width: 20%;
 }
 
+
+
 @media only screen and (max-width: 1024px) {
   .content_single h3 {
     font-size: 18px;
@@ -591,5 +593,11 @@ footer {
   }
   body, html {
     overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px){
+  .main_section {
+    min-height: 50vh;
   }
 }
