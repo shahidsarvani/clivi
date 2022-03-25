@@ -1,5 +1,5 @@
 <template>
-  <div class="days_wrap p-4">
+  <div class="days_wrap p-4 w-100">
     <div class="days_inner px-5 pb-3 deadline-format">
       <div class="day_single">
         <h3>{{ days }}</h3>
