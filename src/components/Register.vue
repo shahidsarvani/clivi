@@ -60,7 +60,7 @@
                         <option value="" selected>Country</option>
                         <option
                           v-for="item in countries"
-                          :key='item.id'
+                          :key="item.id"
                           :value="item.id"
                         >
                           {{ item.name }}
@@ -135,12 +135,6 @@ import '../axios';
 const baseURL = 'https://portal.clivi.com/index.php/api';
 // const baseURL = 'http://127.0.0.1:8000/api';
 
-// const getFormData = (object) =>
-//   Object.keys(object).reduce((formData, key) => {
-//     formData.append(key, object[key]);
-//     return formData;
-//   }, new FormData());
-
 export default {
   name: 'Login',
   components: { TimerCountdown },
@@ -190,7 +184,6 @@ export default {
       } else {
         document.getElementById('dob').classList.remove('invalid');
       }
-      //   var bodyFormData = getFormData(this.form);
       const postData = {
         username: this.form.username,
         email: this.form.email,
@@ -205,7 +198,6 @@ export default {
           method: 'post',
           headers: {
             'Content-Type': 'application/json',
-            // 'x-access-token': 'token-value',
           },
           body: JSON.stringify(postData),
         });
@@ -216,7 +208,14 @@ export default {
         const data = await res.json();
         console.log(data);
         if (data.status == 1) {
-          this.$router.push('/login');
+          localStorage.setItem('token', data.token);
+          axios.defaults.headers.common.Authorization =
+            'Bearer ' + data.token;
+          this.$store.dispatch('login', data);
+          if (this.$store.getters.isLoggedIn) {
+            this.$router.push('/dashboard');
+          }
+          // this.$router.push('/login');
         } else if (data.status == 0) {
           alert(data.message);
         } else if (data.status == 3) {
@@ -228,7 +227,7 @@ export default {
           });
         }
       } catch (err) {
-        this.postResult = err.message;
+        console.log(err.message);
       }
     },
     async get_users() {

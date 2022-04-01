@@ -21,7 +21,7 @@
                       <input
                         class="input_single w-100"
                         id="email"
-                        type="email"
+                        type="text"
                         placeholder="Email/username"
                         v-model="form.email"
                       />
@@ -134,7 +134,9 @@ export default {
           this.$router.push('/dashboard');
         }
       } else if (response.data.status == 0) {
-        alert(response.data.message);
+        // alert(response.data.message);
+        document.getElementById('email').classList.add('invalid');
+        document.getElementById('password').classList.add('invalid');
       } else if (response.data.status == 3) {
         console.log(response.data.message);
         Object.keys(response.data.message).map((index, value) => {

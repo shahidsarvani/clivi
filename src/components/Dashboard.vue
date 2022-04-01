@@ -44,22 +44,22 @@
                     <div
                       class="social__icon d-flex justify-content-center align-items-center flex-wrap"
                     >
-                      <a href="#">
+                      <a href="https://discord.gg/ADQPwabQ">
                         <img src="../../public/assets/images/footer.svg" />
                       </a>
-                      <a href="#">
+                      <a href="https://www.tiktok.com/@cliviapp">
                         <img src="../../public/assets/images/footer2.svg" />
                       </a>
-                      <a href="#">
+                      <a href="https://www.twitch.tv/cliviapp">
                         <img src="../../public/assets/images/footer3.svg" />
                       </a>
-                      <a href="#">
+                      <a href="https://www.instagram.com/cliviapp">
                         <img src="../../public/assets/images/Instagram.svg" />
                       </a>
-                      <a href="#">
+                      <a href="https://twitter.com/APPCLIVI">
                         <img src="../../public/assets/images/Twitter.svg" />
                       </a>
-                      <a href="#">
+                      <a href="https://www.youtube.com/channel/UCnDtQ4qpTyknMTV7LV4MsQQ">
                         <img src="../../public/assets/images/YouTube.svg" />
                       </a>
                     </div>
@@ -68,7 +68,9 @@
               </form>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-5 ms-auto d-flex align-items-center">
+          <div
+            class="col-12 col-md-6 col-lg-5 ms-auto d-flex align-items-center"
+          >
             <TimerCountdown />
           </div>
 
@@ -82,7 +84,8 @@
                   <div
                     class="gamer_single d-flex align-items-center py-3 py-lg-0"
                     v-if="referred_users.length > 0"
-                    v-for:="referred_user in referred_users">
+                    v-for:="referred_user in referred_users"
+                  >
                     <img :src="referred_user.image_url" />
                     <div class="gamer_detail ms-3">
                       <h3 class="mb-1">{{ referred_user.username }}</h3>
@@ -196,7 +199,8 @@ export default {
     };
   },
   async mounted() {
-    axios.defaults.headers.common.Authorization = 'Bearer ' + localStorage.getItem('token')
+    axios.defaults.headers.common.Authorization =
+      'Bearer ' + localStorage.getItem('token');
     this.user = await this.get_user_data();
     this.referral_link = 'https://clivi.com/register/' + this.user.username;
     let referred_users = await this.get_users();
