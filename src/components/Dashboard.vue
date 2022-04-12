@@ -44,7 +44,7 @@
                     <div
                       class="social__icon d-flex justify-content-center align-items-center flex-wrap"
                     >
-                      <a href="https://discord.gg/ADQPwabQ">
+                      <a href="https://discord.gg/C8NXx523">
                         <img src="../../public/assets/images/footer.svg" />
                       </a>
                       <a href="https://www.tiktok.com/@cliviapp">
